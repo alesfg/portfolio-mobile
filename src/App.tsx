@@ -7,12 +7,9 @@ import {
   FaGithub, 
   FaEnvelope,
   FaReact,
-  FaSwift,
   FaAndroid,
   FaCode,
-  FaStar,
-  FaRocket,
-  FaMobileAlt
+  FaRocket
 } from 'react-icons/fa';
 import { 
   SiTypescript, 
@@ -22,8 +19,6 @@ import {
   SiFlutter
 } from 'react-icons/si';
 import Navbar from './components/Navbar';
-import OptimizedImage from './components/OptimizedImage';
-import SimpleStatsSection from './components/SimpleStatsSection';
 import ProjectsSection from './components/ProjectsSection';
 import './App.css';
 
@@ -269,6 +264,28 @@ function App() {
             <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6">
               Mi enfoque se centra en la <strong>calidad del código</strong>, la <strong>experiencia del usuario</strong> y las <strong>mejores prácticas de la industria</strong>. Tengo experiencia desplegando aplicaciones tanto en <strong>Apple Store</strong> como en <strong>Google Play Store</strong>, incluyendo el manejo completo del proceso de publicación, revisiones y actualizaciones.
             </p>
+            
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 mb-6 border border-white/10">
+              <h3 className="text-xl font-bold text-cyan-400 mb-4">💼 Experiencia Profesional</h3>
+              <div className="space-y-4">
+                <div className="border-l-4 border-blue-400 pl-4">
+                  <h4 className="font-semibold text-white">LaunchPad</h4>
+                  <p className="text-gray-300">Desarrollador Mobile • 2024-2025</p>
+                </div>
+                <div className="border-l-4 border-purple-400 pl-4">
+                  <h4 className="font-semibold text-white">Thinkia (antes Search Engine Business)</h4>
+                  <p className="text-gray-300">Desarrollador Mobile • 2023-2024</p>
+                </div>
+                <div className="border-l-4 border-green-400 pl-4">
+                  <h4 className="font-semibold text-white">Movetia & Movilges</h4>
+                  <p className="text-gray-300">Desarrollador Mobile • 2022</p>
+                </div>
+                <div className="border-l-4 border-orange-400 pl-4">
+                  <h4 className="font-semibold text-white">Fiverr</h4>
+                  <p className="text-gray-300">Freelancer • Trabajo discontinuado</p>
+                </div>
+              </div>
+            </div>
 
             <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6">
               He desarrollado aplicaciones que han alcanzado más de <strong>50,000 descargas</strong>, incluyendo experiencia con apps que fueron retiradas por temas de copyright, lo que me ha dado un profundo entendimiento de las políticas de las tiendas y cómo crear contenido original y compliant.
@@ -313,7 +330,7 @@ function App() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
             <div className="text-center">
               <div className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-md border border-white/15 rounded-3xl p-10 shadow-lg">
                 <div className="text-5xl mb-6">🚀</div>
@@ -361,6 +378,18 @@ function App() {
                 </p>
               </div>
             </div>
+
+            <div className="text-center">
+              <div className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-md border border-white/15 rounded-3xl p-8 md:p-10 shadow-lg">
+                <div className="text-5xl mb-6">🏢</div>
+                <div className="text-5xl md:text-6xl lg:text-7xl font-black mb-3 bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent tracking-tight">
+                  5+
+                </div>
+                <p className="text-gray-300 font-semibold text-lg md:text-xl leading-tight">
+                  Empresas Trabajadas
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="text-center mt-20">
@@ -370,7 +399,7 @@ function App() {
               </p>
               <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-4xl">
                 Experiencia con apps que alcanzaron <span className="text-green-400 font-semibold">+50K descargas</span> • 
-                Conocimiento profundo en <span className="text-blue-400 font-semibold">políticas de tiendas</span> • 
+                <span className="text-blue-400 font-semibold">4+ años</span> trabajando en empresas como <span className="text-purple-400 font-semibold">LaunchPad, Thinkia, Movetia</span> • 
                 Implementación avanzada de <span className="text-orange-400 font-semibold">AdMob</span>
               </p>
             </div>
@@ -560,18 +589,18 @@ function App() {
 
             <div className="inline-block bg-white/10 backdrop-blur-md rounded-2xl p-8 border-2 border-white/30">
               <p className="text-white text-lg mb-2">
-                <strong>📱 Especializado en:</strong>
+                <strong>💼 Experiencia Profesional:</strong>
               </p>
               <div className="flex flex-wrap justify-center gap-3">
-                <span className="px-4 py-2 bg-white/20 rounded-full text-white font-semibold">iOS</span>
-                <span className="px-4 py-2 bg-white/20 rounded-full text-white font-semibold">Android</span>
-                <span className="px-4 py-2 bg-white/20 rounded-full text-white font-semibold">React Native</span>
-                <span className="px-4 py-2 bg-white/20 rounded-full text-white font-semibold">Expo</span>
-                <span className="px-4 py-2 bg-white/20 rounded-full text-white font-semibold">AdMob</span>
+                <span className="px-4 py-2 bg-white/20 rounded-full text-white font-semibold">LaunchPad</span>
+                <span className="px-4 py-2 bg-white/20 rounded-full text-white font-semibold">Thinkia</span>
+                <span className="px-4 py-2 bg-white/20 rounded-full text-white font-semibold">Movetia</span>
+                <span className="px-4 py-2 bg-white/20 rounded-full text-white font-semibold">Movilges</span>
+                <span className="px-4 py-2 bg-white/20 rounded-full text-white font-semibold">Fiverr</span>
               </div>
               <p className="text-white/80 text-sm mt-4">
-                ✅ Experiencia publicando en App Store y Play Store<br/>
-                ✅ Apps con +50K descargas • Conocimiento en políticas de tiendas
+                ✅ 4+ años de experiencia • Apps con +50K descargas<br/>
+                ✅ Especializado en React Native, iOS, Android, AdMob
               </p>
             </div>
           </motion.div>

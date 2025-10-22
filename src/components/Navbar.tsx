@@ -56,7 +56,7 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-8">
-            {navItems.map((item, index) => (
+            {navItems.map((item) => (
               <motion.a
                 key={item.href}
                 href={item.href}
@@ -91,7 +91,7 @@ const Navbar = () => {
             className="md:hidden bg-gray-900/95 backdrop-blur-lg border-t border-white/10"
           >
             <div className="container mx-auto px-6 py-4 space-y-4">
-              {navItems.map((item, index) => (
+              {navItems.map((item) => (
                 <motion.a
                   key={item.href}
                   href={item.href}

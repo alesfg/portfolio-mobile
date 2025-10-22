@@ -10,7 +10,7 @@ interface App {
   technologies: string[];
   appStoreLink: string;
   status: 'Published' | 'Coming Soon';
-  platform: 'iOS' | 'Android';
+  platform: 'iOS' | 'Android' | 'iOS & Android';
   githubLink?: string;
   features?: string[];
 }
