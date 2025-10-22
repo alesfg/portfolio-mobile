@@ -30,7 +30,7 @@ function App() {
     {
       name: 'Italian Brainrot Dex',
       description: 'Una aplicación innovadora para aprender italiano de manera divertida y memorable con contenido moderno.',
-      image: 'https://images.unsplash.com/photo-1516383740770-fbcc5ccbece0?w=400&h=600&fit=crop',
+      image: '/portfolio-mobile/src/assets/brainroticon.png',
       technologies: ['React Native', 'Expo', 'Swift', 'SwiftUI', 'CoreData', 'AdMob'],
       appStoreLink: 'https://apps.apple.com/es/app/italian-brainrot-dex/id6749838045',
       status: 'Published' as const,
@@ -45,7 +45,7 @@ function App() {
     {
       name: 'Cat Library',
       description: 'Tu biblioteca digital de gatos. Explora, aprende y guarda información sobre diferentes razas felinas.',
-      image: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=600&fit=crop',
+      image: '/portfolio-mobile/src/assets/cats.png',
       technologies: ['React Native', 'Expo', 'Swift', 'SwiftUI', 'API Integration', 'AdMob'],
       appStoreLink: 'https://apps.apple.com/es/app/cat-library/id6754114981',
       status: 'Published' as const,
@@ -60,7 +60,7 @@ function App() {
     {
       name: 'Naturalia - Vida Natural',
       description: 'Tu compañero para una vida más natural y sostenible. Descubre consejos, rutinas y productos eco-friendly.',
-      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=600&fit=crop',
+      image: '/portfolio-mobile/src/assets/naturalia-icon.png',
       technologies: ['React Native', 'Expo', 'Firebase', 'AdMob'],
       appStoreLink: '#',
       status: 'Coming Soon' as const,
@@ -75,7 +75,7 @@ function App() {
     {
       name: 'Vida Virtual - Hábitos RPG',
       description: 'Transforma tu vida real en un juego RPG. Completa misiones, sube de nivel y mejora tus hábitos diarios.',
-      image: 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=400&h=600&fit=crop',
+      image: '/portfolio-mobile/src/assets/vida-virtual.png',
       technologies: ['React Native', 'Expo', 'Firebase', 'AdMob', 'Gamification'],
       appStoreLink: '#',
       status: 'Coming Soon' as const,
