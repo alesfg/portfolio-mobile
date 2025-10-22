@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -16,11 +18,11 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { href: '#about', label: 'Sobre Mí' },
-    { href: '#projects', label: 'Proyectos' },
-    { href: '#skills', label: 'Habilidades' },
-    { href: '#stats', label: 'Estadísticas' },
-    { href: '#contact', label: 'Contacto' }
+    { href: '#about', label: t('navbar.about') },
+    { href: '#projects', label: t('navbar.projects') },
+    { href: '#skills', label: t('navbar.skills') },
+    { href: '#stats', label: t('navbar.stats') },
+    { href: '#contact', label: t('navbar.contact') }
   ];
 
   const scrollToSection = (href: string) => {

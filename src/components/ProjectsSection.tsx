@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { FaApple, FaGooglePlay, FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import OptimizedImage from './OptimizedImage';
 
@@ -20,13 +21,14 @@ interface ProjectsSectionProps {
 }
 
 const ProjectsSection = ({ apps }: ProjectsSectionProps) => {
+  const { t } = useTranslation();
   const [filter, setFilter] = useState('all');
   const [selectedApp, setSelectedApp] = useState<App | null>(null);
 
   const filters = [
-    { key: 'all', label: 'Todas', icon: '📱' },
-    { key: 'published', label: 'Publicadas', icon: '✅' },
-    { key: 'upcoming', label: 'Próximas', icon: '🚀' },
+    { key: 'all', label: t('projects.all'), icon: '📱' },
+    { key: 'published', label: t('projects.published'), icon: '✅' },
+    { key: 'upcoming', label: t('projects.upcoming'), icon: '🚀' },
     { key: 'ios', label: 'iOS', icon: '🍎' },
     { key: 'android', label: 'Android', icon: '🤖' }
   ];
@@ -60,11 +62,11 @@ const ProjectsSection = ({ apps }: ProjectsSectionProps) => {
         <div className="absolute top-4 right-4">
           {app.status === 'Published' ? (
             <span className="px-4 py-2 bg-green-500 text-white rounded-full text-sm font-semibold shadow-lg">
-              ✓ Publicada
+              ✓ {t('projects.published')}
             </span>
           ) : (
             <span className="px-4 py-2 bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-full text-sm font-semibold shadow-lg">
-              🚀 Próximamente
+              🚀 {t('projects.comingSoon')}
             </span>
           )}
         </div>
@@ -114,7 +116,7 @@ const ProjectsSection = ({ apps }: ProjectsSectionProps) => {
               onClick={(e) => e.stopPropagation()}
             >
               <FaExternalLinkAlt className="text-sm" />
-              Ver App
+              {t('projects.viewProject')}
             </motion.a>
           )}
           {app.githubLink && (
@@ -128,6 +130,7 @@ const ProjectsSection = ({ apps }: ProjectsSectionProps) => {
               onClick={(e) => e.stopPropagation()}
             >
               <FaGithub />
+              {t('projects.viewCode')}
             </motion.a>
           )}
         </div>
@@ -145,10 +148,10 @@ const ProjectsSection = ({ apps }: ProjectsSectionProps) => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Mis Proyectos
+            {t('projects.title')}
           </h2>
           <p className="text-xl text-gray-600">
-            Aplicaciones que he desarrollado con pasión y dedicación
+            {t('projects.subtitle')}
           </p>
         </motion.div>
 
@@ -202,10 +205,10 @@ const ProjectsSection = ({ apps }: ProjectsSectionProps) => {
           >
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-gray-700 mb-2">
-              No se encontraron proyectos
+              {t('projects.noResults')}
             </h3>
             <p className="text-gray-500">
-              Prueba con otro filtro para ver más proyectos
+              {t('projects.tryAnotherFilter')}
             </p>
           </motion.div>
         )}
@@ -268,7 +271,7 @@ const ProjectsSection = ({ apps }: ProjectsSectionProps) => {
 
                 {selectedApp.features && (
                   <div className="mb-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Características</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('projects.features')}</h3>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                       {selectedApp.features.map((feature, index) => (
                         <li key={index} className="flex items-center gap-2 text-gray-700">
@@ -301,7 +304,7 @@ const ProjectsSection = ({ apps }: ProjectsSectionProps) => {
                       className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all flex items-center gap-2"
                     >
                       <FaExternalLinkAlt />
-                      Ver en App Store
+                      {t('projects.viewProject')}
                     </motion.a>
                   )}
                   {selectedApp.githubLink && (
@@ -313,7 +316,7 @@ const ProjectsSection = ({ apps }: ProjectsSectionProps) => {
                       className="px-8 py-4 bg-gray-800 text-white rounded-lg font-semibold hover:bg-gray-900 transition-all flex items-center gap-2"
                     >
                       <FaGithub />
-                      Ver Código
+                      {t('projects.viewCode')}
                     </motion.a>
                   )}
                 </div>

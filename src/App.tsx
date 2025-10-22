@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Toaster } from 'react-hot-toast';
+import { useTranslation } from 'react-i18next';
 import { 
   FaApple, 
   FaLinkedin, 
@@ -19,9 +20,12 @@ import {
 } from 'react-icons/si';
 import Navbar from './components/Navbar';
 import ProjectsSection from './components/ProjectsSection';
+import LanguageSelector from './components/LanguageSelector';
 import './App.css';
 
 function App() {
+  const { t } = useTranslation();
+  
   const apps = [
     {
       name: 'Italian Brainrot Dex',
@@ -124,6 +128,7 @@ function App() {
         }}
       />
       
+      <LanguageSelector />
       <Navbar />
       
       {/* SECTION 1: Hero/Banner - Dark Mode Professional */}
@@ -160,18 +165,15 @@ function App() {
             </motion.div>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
-              <span className="text-white">Alejandro </span>
-              <span className="text-gradient from-cyan-400 via-green-400 to-orange-500">
-                Flores
-              </span>
+              <span className="text-white">{t('hero.name')}</span>
             </h1>
             
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-300 mb-4">
-              Mobile App Developer
+              {t('hero.title')}
             </h2>
             
             <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-              Transformo ideas en aplicaciones móviles excepcionales para iOS y Android
+              {t('hero.subtitle')}
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -180,14 +182,14 @@ function App() {
                 className="px-6 py-3 rounded-lg"
                 style={{ backgroundColor: 'rgba(0, 243, 255, 0.2)', borderWidth: '2px', borderColor: '#00f3ff' }}
               >
-                <p className="text-white font-semibold">2 Apps en App Store</p>
+                <p className="text-white font-semibold">{t('hero.appsStore')}</p>
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="px-6 py-3 rounded-lg"
                 style={{ backgroundColor: 'rgba(57, 255, 20, 0.2)', borderWidth: '2px', borderColor: '#39ff14' }}
               >
-                <p className="text-white font-semibold">4 Apps Coming Soon</p>
+                <p className="text-white font-semibold">{t('hero.comingSoon')}</p>
               </motion.div>
             </div>
 
@@ -208,7 +210,7 @@ function App() {
                 className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-green-400 text-white font-bold rounded-lg shadow-lg transition-shadow"
                 style={{ boxShadow: '0 10px 25px rgba(0, 243, 255, 0.3)' }}
               >
-                Ver Proyectos
+                {t('hero.viewProjects')}
               </motion.a>
               <motion.a
                 href="#contact"
@@ -220,7 +222,7 @@ function App() {
                 }}
                 className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-gray-900 transition-colors"
               >
-                Contactar
+                {t('hero.contact')}
               </motion.a>
             </motion.div>
           </motion.div>
@@ -251,51 +253,46 @@ function App() {
             className="glass rounded-3xl p-8 md:p-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center">
-              Sobre Mí
+              {t('about.title')}
             </h2>
             
             <div className="h-1 w-24 bg-gradient-to-r from-white/50 to-transparent mx-auto mb-8"></div>
             
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6">
-              Soy <strong>Alejandro Flores González</strong>, un desarrollador apasionado por crear experiencias móviles que marquen la diferencia. Con experiencia en desarrollo iOS y Android, me especializo en convertir ideas innovadoras en aplicaciones funcionales y atractivas.
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: t('about.description1') }}>
             </p>
             
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6">
-              Mi enfoque se centra en la <strong>calidad del código</strong>, la <strong>experiencia del usuario</strong> y las <strong>mejores prácticas de la industria</strong>. Tengo experiencia desplegando aplicaciones tanto en <strong>Apple Store</strong> como en <strong>Google Play Store</strong>, incluyendo el manejo completo del proceso de publicación, revisiones y actualizaciones.
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: t('about.description2') }}>
             </p>
             
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 mb-6 border border-white/10">
-              <h3 className="text-xl font-bold text-cyan-400 mb-4">💼 Experiencia Profesional</h3>
+              <h3 className="text-xl font-bold text-cyan-400 mb-4">{t('about.professionalExperience')}</h3>
               <div className="space-y-4">
                 <div className="border-l-4 border-blue-400 pl-4">
-                  <h4 className="font-semibold text-white">LaunchPad</h4>
+                  <h4 className="font-semibold text-white">{t('about.launchpad')}</h4>
                   <p className="text-gray-300">Desarrollador Mobile • 2024-2025</p>
                 </div>
                 <div className="border-l-4 border-purple-400 pl-4">
-                  <h4 className="font-semibold text-white">Thinkia (antes Search Engine Business)</h4>
+                  <h4 className="font-semibold text-white">{t('about.thinkia')}</h4>
                   <p className="text-gray-300">Desarrollador Mobile • 2023-2024</p>
                 </div>
                 <div className="border-l-4 border-green-400 pl-4">
-                  <h4 className="font-semibold text-white">Movetia & Movilges</h4>
+                  <h4 className="font-semibold text-white">{t('about.movetia')}</h4>
                   <p className="text-gray-300">Desarrollador Mobile • 2022</p>
                 </div>
                 <div className="border-l-4 border-orange-400 pl-4">
-                  <h4 className="font-semibold text-white">Fiverr</h4>
+                  <h4 className="font-semibold text-white">{t('about.fiverr')}</h4>
                   <p className="text-gray-300">Freelancer • Trabajo discontinuado</p>
                 </div>
               </div>
             </div>
 
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6">
-              He desarrollado aplicaciones que han alcanzado más de <strong>50,000 descargas</strong>, incluyendo experiencia con apps que fueron retiradas por temas de copyright, lo que me ha dado un profundo entendimiento de las políticas de las tiendas y cómo crear contenido original y compliant.
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: t('about.description3') }}>
             </p>
 
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6">
-              También tengo experiencia implementando <strong>sistemas de monetización con AdMob</strong>, optimizando la integración de anuncios para maximizar ingresos sin comprometer la experiencia del usuario.
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: t('about.description4') }}>
             </p>
 
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-              Busco constantemente nuevos desafíos que me permitan crecer profesionalmente y aportar valor real a los usuarios y negocios.
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed" dangerouslySetInnerHTML={{ __html: t('about.description5') }}>
             </p>
 
             <div className="mt-10 flex justify-center">
@@ -307,7 +304,7 @@ function App() {
                 className="glass-dark px-8 py-4 rounded-xl flex items-center gap-3 text-white font-semibold hover:bg-white/20 transition-colors"
               >
                 <FaLinkedin className="text-2xl" />
-                <span>Conecta en LinkedIn</span>
+                <span>{t('about.connectLinkedin')}</span>
               </motion.a>
             </div>
           </motion.div>
@@ -322,10 +319,10 @@ function App() {
         <div className="relative z-10 container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
-              Números que Hablan
+              {t('stats.title')}
             </h2>
             <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              Resultados que demuestran mi experiencia y dedicación
+              {t('stats.subtitle')}
             </p>
           </div>
 
@@ -337,7 +334,7 @@ function App() {
                   8+
                 </div>
                 <p className="text-gray-300 font-semibold text-lg md:text-xl leading-tight">
-                  Proyectos Totales
+                  {t('stats.totalProjects')}
                 </p>
               </div>
             </div>
@@ -349,7 +346,7 @@ function App() {
                   2
                 </div>
                 <p className="text-gray-300 font-semibold text-lg md:text-xl leading-tight">
-                  Apps Publicadas
+                  {t('stats.publishedApps')}
                 </p>
               </div>
             </div>
@@ -361,7 +358,7 @@ function App() {
                   50K+
                 </div>
                 <p className="text-gray-300 font-semibold text-lg md:text-xl leading-tight">
-                  Descargas Alcanzadas
+                  {t('stats.downloadsReached')}
                 </p>
               </div>
             </div>
@@ -373,7 +370,7 @@ function App() {
                   4+
                 </div>
                 <p className="text-gray-300 font-semibold text-lg md:text-xl leading-tight">
-                  Años de Experiencia
+                  {t('stats.yearsExperience')}
                 </p>
               </div>
             </div>
@@ -385,7 +382,7 @@ function App() {
                   5+
                 </div>
                 <p className="text-gray-300 font-semibold text-lg md:text-xl leading-tight">
-                  Empresas Trabajadas
+                  {t('stats.companiesWorked')}
                 </p>
               </div>
             </div>
@@ -393,13 +390,9 @@ function App() {
 
           <div className="text-center mt-20">
             <div className="inline-block bg-gradient-to-r from-cyan-400/15 to-purple-400/15 backdrop-blur-sm border border-cyan-400/25 rounded-3xl px-12 py-8 shadow-2xl">
-              <p className="text-gray-200 text-xl md:text-2xl font-semibold mb-3">
-                <span className="text-cyan-400 font-bold">+4 aplicaciones</span> próximas a lanzarse en Google Play Store
+              <p className="text-gray-200 text-xl md:text-2xl font-semibold mb-3" dangerouslySetInnerHTML={{ __html: t('stats.comingSoonText') }}>
               </p>
-              <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-4xl">
-                Experiencia con apps que alcanzaron <span className="text-green-400 font-semibold">+50K descargas</span> • 
-                <span className="text-blue-400 font-semibold">4+ años</span> trabajando en empresas como <span className="text-purple-400 font-semibold">LaunchPad, Thinkia, Movetia</span> • 
-                Implementación avanzada de <span className="text-orange-400 font-semibold">AdMob</span>
+              <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-4xl" dangerouslySetInnerHTML={{ __html: t('stats.experienceText') }}>
               </p>
             </div>
           </div>
@@ -447,11 +440,11 @@ function App() {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="text-gradient from-cyan-400 via-purple-500 to-fuchsia-500">
-                Habilidades Técnicas
+                {t('skills.title')}
               </span>
             </h2>
             <p className="text-xl text-gray-400">
-              Tecnologías y frameworks que domino
+              {t('skills.subtitle')}
             </p>
           </motion.div>
 
@@ -500,7 +493,7 @@ function App() {
             viewport={{ once: true }}
             className="mt-16 text-center"
           >
-            <p className="text-gray-400 mb-6">Y muchas más tecnologías...</p>
+            <p className="text-gray-400 mb-6">{t('skills.moreTechnologies')}</p>
             <div className="flex flex-wrap justify-center gap-8 opacity-50">
               <FaCode className="text-4xl text-white" />
               <FaRocket className="text-4xl text-white" />
@@ -541,13 +534,11 @@ function App() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              ¿Listo para crear algo increíble?
+              {t('contact.title')}
             </h2>
             
             <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed">
-              Estoy disponible para nuevos proyectos y colaboraciones. 
-              <br className="hidden md:block" />
-              ¡Hagamos realidad tu próxima gran idea!
+              {t('contact.subtitle')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
@@ -558,7 +549,7 @@ function App() {
                 className="px-10 py-5 bg-white text-purple-600 font-bold text-lg rounded-2xl shadow-2xl hover:shadow-white/50 transition-all flex items-center gap-3"
               >
                 <FaEnvelope className="text-2xl" />
-                Enviar Email
+                {t('contact.sendEmail')}
               </motion.a>
               
               <motion.a
@@ -588,7 +579,7 @@ function App() {
 
             <div className="inline-block bg-white/10 backdrop-blur-md rounded-2xl p-8 border-2 border-white/30">
               <p className="text-white text-lg mb-2">
-                <strong>💼 Experiencia Profesional:</strong>
+                <strong>{t('contact.professionalExperience')}</strong>
               </p>
               <div className="flex flex-wrap justify-center gap-3">
                 <span className="px-4 py-2 bg-white/20 rounded-full text-white font-semibold">LaunchPad</span>
@@ -597,9 +588,7 @@ function App() {
                 <span className="px-4 py-2 bg-white/20 rounded-full text-white font-semibold">Movilges</span>
                 <span className="px-4 py-2 bg-white/20 rounded-full text-white font-semibold">Fiverr</span>
               </div>
-              <p className="text-white/80 text-sm mt-4">
-                ✅ 4+ años de experiencia • Apps con +50K descargas<br/>
-                ✅ Especializado en React Native, iOS, Android, AdMob
+              <p className="text-white/80 text-sm mt-4" dangerouslySetInnerHTML={{ __html: t('contact.experienceText') }}>
               </p>
             </div>
           </motion.div>
@@ -615,27 +604,27 @@ function App() {
                 Alejandro Flores
               </h3>
               <p className="text-gray-400">
-                Desarrollador de aplicaciones móviles apasionado por crear experiencias excepcionales.
+                {t('footer.description')}
               </p>
             </div>
 
             <div>
-              <h4 className="text-xl font-bold mb-4">Navegación</h4>
+              <h4 className="text-xl font-bold mb-4">{t('footer.navigation')}</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">Inicio</a>
+                  <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">{t('footer.home')}</a>
                 </li>
                 <li>
-                  <a href="#projects" className="text-gray-400 hover:text-cyan-400 transition-colors">Proyectos</a>
+                  <a href="#projects" className="text-gray-400 hover:text-cyan-400 transition-colors">{t('footer.projects')}</a>
                 </li>
                 <li>
-                  <a href="#contact" className="text-gray-400 hover:text-cyan-400 transition-colors">Contacto</a>
+                  <a href="#contact" className="text-gray-400 hover:text-cyan-400 transition-colors">{t('footer.contact')}</a>
                 </li>
               </ul>
             </div>
 
       <div>
-              <h4 className="text-xl font-bold mb-4">Conecta Conmigo</h4>
+              <h4 className="text-xl font-bold mb-4">{t('footer.connectWithMe')}</h4>
               <div className="flex gap-4">
                 <motion.a
                   href="https://www.linkedin.com/in/alexfloresgonzalez/"
@@ -668,10 +657,10 @@ function App() {
 
           <div className="border-t border-white/10 pt-8 text-center">
             <p className="text-gray-400">
-              © 2025 Alejandro Flores González. Todos los derechos reservados.
+              {t('footer.rightsReserved')}
             </p>
             <p className="text-gray-500 mt-2 text-sm">
-              Hecho con ❤️ y mucho código (y un poquillo de IA)
+              {t('footer.madeWith')}
         </p>
       </div>
         </div>
