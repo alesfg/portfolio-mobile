@@ -668,10 +668,10 @@ function App() {
 
           <div className="border-t border-white/10 pt-8 text-center">
             <p className="text-gray-400">
-              © 2024 Alejandro Flores González. Todos los derechos reservados.
+              © 2025 Alejandro Flores González. Todos los derechos reservados.
             </p>
             <p className="text-gray-500 mt-2 text-sm">
-              Hecho con ❤️ y mucho código
+              Hecho con ❤️ y mucho código (y un poquillo de IA)
         </p>
       </div>
         </div>
