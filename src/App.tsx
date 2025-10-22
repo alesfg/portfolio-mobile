@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { Toaster } from 'react-hot-toast';
 import { 
   FaApple, 
-  FaGooglePlay, 
   FaLinkedin, 
   FaGithub, 
   FaEnvelope,

@@ -101,7 +101,7 @@ const Navbar = () => {
                   }}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: 0.1 }}
                   className="block text-white hover:text-cyan-400 transition-colors duration-300 font-medium py-2"
                 >
                   {item.label}
