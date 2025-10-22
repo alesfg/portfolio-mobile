@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-blue: #00f3ff;
+  --color-neon-green: #39ff14;
+  --color-neon-orange: #ff6b35;
+  --color-neon-purple: #bc13fe;
+  --color-neon-cyan: #00ffff;
+  --color-neon-magenta: #ff00ff;
+  
+  --animate-gradient: gradient 8s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00f3ff, 0 0 40px #00f3ff;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #00f3ff, 0 0 40px #00f3ff, 0 0 50px #00f3ff;
+  }
+}
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply m-0 p-0 font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-lg bg-white/10 border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply backdrop-blur-lg bg-black/30 border border-white/10;
+  }
+  
+  .neumorphic {
+    box-shadow: 
+      12px 12px 24px rgba(0, 0, 0, 0.15),
+      -12px -12px 24px rgba(255, 255, 255, 0.05);
+  }
+  
+  .neumorphic-inset {
+    box-shadow: 
+      inset 8px 8px 16px rgba(0, 0, 0, 0.15),
+      inset -8px -8px 16px rgba(255, 255, 255, 0.05);
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r;
+  }
+}
