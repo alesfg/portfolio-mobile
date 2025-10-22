@@ -68,11 +68,10 @@ Para personalizar el portfolio:
 ## 📞 Contacto
 
 - **LinkedIn**: [alexfloresgonzalez](https://www.linkedin.com/in/alexfloresgonzalez/)
-- **Email**: alex@example.com
 
 ## 📄 Licencia
 
-© 2024 Alejandro Flores González. Todos los derechos reservados.
+© 2025 Alejandro Flores González. Todos los derechos reservados.
 
 ---
 
