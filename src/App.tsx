@@ -149,7 +149,7 @@ function App() {
               className="inline-block mb-6"
             >
               <img 
-                src="/cartoon.png" 
+                src="/portfolio-mobile/cartoon.png" 
                 alt="Alejandro Flores - Mobile Developer" 
                 className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full shadow-2xl border-4 border-cyan-400/30"
                 style={{ 
