@@ -30,7 +30,7 @@ function App() {
     {
       name: 'Italian Brainrot Dex',
       description: 'Una aplicación innovadora para aprender italiano de manera divertida y memorable con contenido moderno.',
-      image: '/portfolio-mobile/src/assets/brainroticon.png',
+      image: '/portfolio-mobile/brainroticon.png',
       technologies: ['React Native', 'Expo', 'Swift', 'SwiftUI', 'CoreData', 'AdMob'],
       appStoreLink: 'https://apps.apple.com/es/app/italian-brainrot-dex/id6749838045',
       status: 'Published' as const,
@@ -45,7 +45,7 @@ function App() {
     {
       name: 'Cat Library',
       description: 'Tu biblioteca digital de gatos. Explora, aprende y guarda información sobre diferentes razas felinas.',
-      image: '/portfolio-mobile/src/assets/cats.png',
+      image: '/portfolio-mobile/cats.png',
       technologies: ['React Native', 'Expo', 'Swift', 'SwiftUI', 'API Integration', 'AdMob'],
       appStoreLink: 'https://apps.apple.com/es/app/cat-library/id6754114981',
       status: 'Published' as const,
@@ -60,7 +60,7 @@ function App() {
     {
       name: 'Naturalia - Vida Natural',
       description: 'Tu compañero para una vida más natural y sostenible. Descubre consejos, rutinas y productos eco-friendly.',
-      image: '/portfolio-mobile/src/assets/naturalia-icon.png',
+      image: '/portfolio-mobile/naturalia-icon.png',
       technologies: ['React Native', 'Expo', 'Firebase', 'AdMob'],
       appStoreLink: '#',
       status: 'Coming Soon' as const,
@@ -75,7 +75,7 @@ function App() {
     {
       name: 'Vida Virtual - Hábitos RPG',
       description: 'Transforma tu vida real en un juego RPG. Completa misiones, sube de nivel y mejora tus hábitos diarios.',
-      image: '/portfolio-mobile/src/assets/vida-virtual.png',
+      image: '/portfolio-mobile/vida-virtual.png',
       technologies: ['React Native', 'Expo', 'Firebase', 'AdMob', 'Gamification'],
       appStoreLink: '#',
       status: 'Coming Soon' as const,
