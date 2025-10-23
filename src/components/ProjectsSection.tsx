@@ -53,7 +53,9 @@ const ProjectsSection = ({ apps }: ProjectsSectionProps) => {
       className="bg-gradient-to-br from-white to-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
       onClick={() => setSelectedApp(app)}
     >
-      <div className="relative h-64 overflow-hidden">
+      <div className={`relative h-64 overflow-hidden ${
+        app.name === 'Italian Brainrot Dex' || app.name === 'Vida Virtual - Hábitos RPG' ? 'bg-white' : ''
+      }`}>
         <OptimizedImage
           src={app.image}
           alt={app.name}
@@ -258,7 +260,9 @@ const ProjectsSection = ({ apps }: ProjectsSectionProps) => {
                   </div>
                 </div>
                 
-                <div className="relative h-96 rounded-xl overflow-hidden mb-6">
+                <div className={`relative h-96 rounded-xl overflow-hidden mb-6 ${
+                  selectedApp.name === 'Italian Brainrot Dex' || selectedApp.name === 'Vida Virtual - Hábitos RPG' ? 'bg-white' : ''
+                }`}>
                   <OptimizedImage
                     src={selectedApp.image}
                     alt={selectedApp.name}

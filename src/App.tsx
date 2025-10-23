@@ -61,7 +61,7 @@ function App() {
       name: 'Naturalia - Vida Natural',
       description: 'Tu compañero para una vida más natural y sostenible. Descubre consejos, rutinas y productos eco-friendly.',
       image: '/portfolio-mobile/naturalia-icon.png',
-      technologies: ['React Native', 'Expo', 'Firebase', 'AdMob'],
+      technologies: ['React Native', 'Expo', 'Firebase', 'AdMob', 'TTS'],
       appStoreLink: '#',
       status: 'Coming Soon' as const,
       platform: 'Android' as const,
