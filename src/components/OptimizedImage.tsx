@@ -5,9 +5,10 @@ interface OptimizedImageProps {
   alt: string;
   className?: string;
   onClick?: () => void;
+  objectFit?: 'cover' | 'contain';
 }
 
-const OptimizedImage = ({ src, alt, className = '', onClick }: OptimizedImageProps) => {
+const OptimizedImage = ({ src, alt, className = '', onClick, objectFit = 'cover' }: OptimizedImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
@@ -37,9 +38,10 @@ const OptimizedImage = ({ src, alt, className = '', onClick }: OptimizedImagePro
             setIsLoaded(true);
             setHasError(true);
           }}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
+          className={`w-full h-full transition-opacity duration-300 ${
             onClick ? 'cursor-pointer hover:scale-105' : ''
           } ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+          style={{ objectFit }}
         />
       )}
     </div>

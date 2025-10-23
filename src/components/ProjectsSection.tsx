@@ -58,6 +58,7 @@ const ProjectsSection = ({ apps }: ProjectsSectionProps) => {
           src={app.image}
           alt={app.name}
           className="w-full h-full"
+          objectFit={app.name === 'Italian Brainrot Dex' || app.name === 'Vida Virtual - Hábitos RPG' ? 'contain' : 'cover'}
         />
         <div className="absolute top-4 right-4">
           {app.status === 'Published' ? (
@@ -262,6 +263,7 @@ const ProjectsSection = ({ apps }: ProjectsSectionProps) => {
                     src={selectedApp.image}
                     alt={selectedApp.name}
                     className="w-full h-full"
+                    objectFit={selectedApp.name === 'Italian Brainrot Dex' || selectedApp.name === 'Vida Virtual - Hábitos RPG' ? 'contain' : 'cover'}
                   />
                 </div>
                 
