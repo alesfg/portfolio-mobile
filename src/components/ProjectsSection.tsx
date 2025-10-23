@@ -258,7 +258,7 @@ const ProjectsSection = ({ apps }: ProjectsSectionProps) => {
                   </div>
                 </div>
                 
-                <div className="relative rounded-xl overflow-hidden mb-4 bg-white h-[350px]">
+                <div className="relative rounded-xl overflow-hidden mb-4 bg-white h-[350px] md:h-[450px] lg:h-[500px]">
                   <OptimizedImage
                     src={selectedApp.image}
                     alt={selectedApp.name}
